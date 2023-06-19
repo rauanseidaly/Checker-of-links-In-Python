@@ -3,11 +3,11 @@ from urllib.request import Request, urlopen
 import urllib.request
 import re
 from urllib.error import HTTPError
-
+                    #write your .txt here
 fileWithlinks=open('Website_Links.txt','r') #Opens a txt file with links
 UrlOfLinks=fileWithlinks.readlines() #Every link of in this file will be Line By Line
 for item in UrlOfLinks: #Loop for Every link in file
-    url = item  #
+    url = item  
     url = url.replace("\n","") #Replace "\n" with "" in file
     def check_url(url): #function which checks url, his links and status code for every link in file
         req = Request(url) #request url 
@@ -50,10 +50,3 @@ for item in UrlOfLinks: #Loop for Every link in file
                             out_red(status_code_error,text)
         
     check_url(url) 
-
-
-
-#rename variable names
-#add comments
-#make README.md file - document
-#add to git repo
